@@ -1,0 +1,24 @@
+body,html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#view {
+  position: relative;
+  overflow-x: hidden;
+}
+
+#viewbox {
+  display: flex;
+  width: 400vw;
+  /* overflow-x: hidden; */
+  transition: all 0.8s;
+  position: absolute;
+}
+
+.page-view {
+  width: 100vw;
+  border: 1px solid black;  
+  min-height: 100vh;
+}

@@ -7,14 +7,28 @@
   <title>Christopher William Nekich - A Web Development Portfolio</title>
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body class="view">
-
-  <div class="viewbox">
-    <div class="home"></div>
-    <div class="about"></div>
-    <div class="work"></div>
-    <div class="contact"></div>
+<body id="view">
+  <header>
+    <nav>
+      <a href="#" data-left="0vw" data-index="0" class="nav-button">Home</a>
+      <a href="#" data-left="-100vw" data-index="1" class="nav-button">About</a>
+      <a href="#" data-left="-200vw" data-index="2" class="nav-button">Work</a>
+      <a href="#" data-left="-300vw" data-index="3" class="nav-button">Contact</a>
+    </nav>
+  </header>
+  <div id="viewbox">
+    <div id="home" class="home page-view">
+      <div class="content-container"></div>
+    </div>
+    <div id="about" class="page-view"></div>
+      <div class="content-container"></div>
+    <div id="work" class="work page-view"></div>
+      <div class="content-container"></div>
+    <div id="contact" class="contact page-view">
+      <div class="content-container"></div>
+    </div>
   </div>
   
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
