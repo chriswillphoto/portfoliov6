@@ -4,24 +4,52 @@ html {
   margin: 0;
   padding: 0;
 }
+header{
+  position: fixed;
+  z-index: 10000;
+  bottom: 0; right: 0;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+}
+
+nav a {
+  display:block;
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-button {
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
 
 #view {
-  position: relative;
+  position: fixed;
   overflow-x: hidden;
+  width:100vw;
+  height:100vh;
 }
 
 #viewbox {
   display: flex;
   width: 400vw;
-  /* overflow-x: hidden; */
+  height:100vh;
   transition: all 0.8s;
   position: absolute;
 }
 
 .page-view {
-  width: 100vw;
+  width: 25%;
   /* border: 1px solid black; */
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   background-position: center;
   background-size: calc(100% + 2px) calc(100% + 2px);
@@ -43,8 +71,20 @@ html {
   background-image: url(https://res.cloudinary.com/dyqesnour/image/upload/v1532762880/portfoliov5bgs3_k6kfty.png);
 }
 
-.content-container {
+/* .content-container {
   width: 100%;
   height: 100%;
   position: relative;
+} */
+
+.draggable {
+  position: absolute;
+}
+
+.drag-handle {
+  position: absolute;
+  top: -18px;
+  left: -14px;
+  background-color: grey;
+  z-index: 10000;
 }
