@@ -4,44 +4,42 @@ html {
   margin: 0;
   padding: 0;
 }
-header{
+header {
   position: fixed;
   z-index: 10000;
-  bottom: 0; right: 0;
+  bottom: 0;
+  right: 0;
 }
 nav {
   display: flex;
   flex-wrap: wrap;
   width: 200px;
-}
 
-nav a {
-  display:block;
-  width: 50%;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  color: white;
-  text-decoration: none;
-}
-
-.nav-button {
-  border: 1px solid black;
-  box-sizing: border-box;
-  border-collapse: collapse;
+  .nav-button {
+    display: block;
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-collapse: collapse;
+  }
 }
 
 #view {
   position: fixed;
   overflow-x: hidden;
-  width:100vw;
-  height:100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 #viewbox {
   display: flex;
   width: 400vw;
-  height:100vh;
+  height: 100vh;
   transition: all 0.8s;
   position: absolute;
 }
@@ -79,12 +77,22 @@ nav a {
 
 .draggable {
   position: absolute;
+  
+  .drag-handle {
+    display: none;
+    position: absolute;
+    top: -18px;
+    left: -14px;
+    background-color: grey;
+    z-index: 10000;
+  }
 }
 
-.drag-handle {
-  position: absolute;
-  top: -18px;
-  left: -14px;
-  background-color: grey;
-  z-index: 10000;
+.view-handles .drag-handle {
+  display: block;
 }
+
+@import "home";
+@import "about";
+@import "contact";
+@import "work";

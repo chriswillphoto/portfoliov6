@@ -4,10 +4,15 @@
   let windowWidth = window.innerWidth;
   let draggables = document.querySelectorAll(".draggable");
 
+  let state = {
+    mouseDown: false,
+    
+  }
+
   draggables.forEach(function(el){
-    const dragHandle = document.createElement('div');
-    dragHandle.innerHTML = "<i class='icon ion-ios-move'></i>"
-    dragHandle.classList = "drag-handle";
+    const dragHandle = document.createElement('i');
+    // dragHandle.innerHTML = "<i class='icon ion-ios-move'></i>"
+    dragHandle.classList = "drag-handle icon ion-ios-move";
     el.appendChild(dragHandle)
   })
 
@@ -48,4 +53,15 @@
     },
     false
   );
+
+  document.addEventListener(
+    "mousedown",
+    function(event){
+      if(event.target.matches(".drag-handle")){
+        console.log('yes');
+      }
+      console.log(event.target)
+    },
+    false
+  )
 })();
