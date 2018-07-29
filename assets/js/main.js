@@ -53,7 +53,13 @@
     if (state.mouseDown){
       const offsetWidth = state.selectedEl.offsetWidth;
       const offsetHeight = state.selectedEl.offsetHeight;
-      // console.log(state);
+      const mouseOffsetX = window.innerWidth - state.mouseX;
+      const mouseOffsetY = window.innerHeight - state.mouseY;
+      const newPosX = mouseOffsetX - offsetWidth;
+      const newPosY = mouseOffsetY - offsetHeight;
+      state.selectedEl.style.right = newPosX + "px";
+      state.selectedEl.style.bottom = newPosY + "px";
+      console.log(state);
     }
   }
 
@@ -64,7 +70,7 @@
       mouseY: e.clientY
     }
 
-    console.log(state);
+    // console.log(state);
   }
 
   // event delegation
