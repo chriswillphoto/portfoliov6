@@ -69,8 +69,8 @@ nav {
   .draggable .drag-handle {
     display: none;
     position: absolute;
-    top: -18px;
-    left: -14px;
+    top: -9px;
+    left: -7px;
     background-color: grey;
     z-index: 10000; }
 
