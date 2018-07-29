@@ -6,7 +6,9 @@
 
   let state = {
     mouseDown: false,
-    
+    timerID: 0,
+    mouseX: 0,
+    mouseY: 0,
   }
 
   draggables.forEach(function(el){
@@ -16,13 +18,13 @@
     el.appendChild(dragHandle)
   })
 
-  let whatever = document.querySelectorAll(".home > *");
+  // let whatever = document.querySelectorAll(".home > *");
 
-  console.log(whatever);
-  let elHeights;
-  whatever.forEach(function(i) {
-    elHeights += i.clientHeight;
-  });
+  // console.log(whatever);
+  // let elHeights;
+  // whatever.forEach(function(i) {
+  //   elHeights += i.clientHeight;
+  // });
 
   viewBox.style.left = 0;
 
@@ -34,6 +36,36 @@
       console.log(newLeft);
     }
   };
+
+  const dragHandler = function(e){
+    if(!state.mouseDown){
+      const timerId = setInterval(boxPosition, 100);
+      state = {
+        ...state,
+        mouseDown: true,
+        timerID: timerId,
+        selectedEl: e.target.parentElement,
+      }
+    }
+  }
+
+  const boxPosition = function(){
+    if (state.mouseDown){
+      const offsetWidth = state.selectedEl.offsetWidth;
+      const offsetHeight = state.selectedEl.offsetHeight;
+      // console.log(state);
+    }
+  }
+
+  const mousePosition = function(e){
+    state = {
+      ...state,
+      mouseX: e.clientX,
+      mouseY: e.clientY
+    }
+
+    console.log(state);
+  }
 
   // event delegation
   document.addEventListener(
@@ -58,10 +90,32 @@
     "mousedown",
     function(event){
       if(event.target.matches(".drag-handle")){
-        console.log('yes');
+        event.preventDefault()
+        dragHandler(event)
       }
-      console.log(event.target)
+      // console.log(event.target)
     },
     false
+  )
+
+  document.addEventListener(
+    "mouseup",
+    function(event){
+      state = {
+        ...state,
+        mouseDown: false,
+      }
+      window.clearInterval(state.timerID)
+      console.log('mouseup')
+    }
+  )
+
+  document.addEventListener(
+    "mousemove",
+    function(event){
+      if(state.mouseDown){
+        mousePosition(event);
+      }
+    }
   )
 })();
