@@ -10,16 +10,15 @@
     mouseX: 0,
     mouseY: 0
   };
-
-  draggables.forEach(function(el) {
-    const dragHandle = document.createElement("i");
-    dragHandle.classList = "drag-handle icon ion-ios-move";
-    el.appendChild(dragHandle);
-  });
-
-
-
-  viewBox.style.left = 0;
+  
+  const onStart = () => {
+    draggables.forEach(function(el) {
+      const dragHandle = document.createElement("i");
+      dragHandle.classList = "drag-handle icon ion-ios-move";
+      el.appendChild(dragHandle);
+    });
+    viewBox.style.left = 0;
+  }
 
   const shiftView = function(e) {
     const newLeft = e.target.getAttribute("data-left");
@@ -112,4 +111,5 @@
       mousePosition(event);
     }
   });
+  onStart();
 })();
