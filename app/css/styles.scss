@@ -92,7 +92,8 @@ nav {
   display: block;
 }
 
-@import "home";
-@import "about";
-@import "contact";
-@import "work";
+//page specific
+@import "./home.scss";
+@import "./about.scss";
+@import "./contact.scss";
+@import "./work.scss";
