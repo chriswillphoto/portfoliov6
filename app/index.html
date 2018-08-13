@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Christopher William Nekich - A Web Development Portfolio</title>
+  <!--build:css css/styles.min.css-->
+  <link href="https://unpkg.com/ionicons@4.2.5/dist/css/ionicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <!--endbuild-->
+</head>
+<body id="view" class="view-handles">
+  <header>
+    <button class="drag-toggle">
+      
+    </button>
+  </header>
+  <footer class="draggable">
+    <nav>
+      <a href="#" data-left="0vw" data-view="home" id="home-nav" class="nav-button">Home</a>
+      <a href="#" data-left="-100vw" data-view="about" id="about-nav" class="nav-button">About</a>
+      <a href="#" data-left="-200vw" data-view="work" id="work-nav" class="nav-button">Work</a>
+      <a href="#" data-left="-300vw" data-view="contact" id="contact-nav" class="nav-button">Contact</a>
+    </nav>
+  </footer>
+  <div id="viewbox">
+    <div id="home" class="home page-view">
+      <div class="content-container">
+        <div class="draggable headings">
+            <h1>A Web Development Portfolio</h1>
+            <h3>by Christopher William Nekich</h3>
+        </div>
+      </div>
+    </div>
+    <div id="about" class="about page-view">
+      <div class="content-container">
+      </div>
+    </div>
+    <div id="work" class="work page-view">
+      <div class="content-container">
+      <div class="project-modal">
+        <div class="content"></div>
+      </div>
+      <button class="project-button"></button>
+      <button class="project-button"></button>
+      <button class="project-button"></button>
+      <button class="project-button"></button>
+      <button class="project-button"></button>
+      <button class="project-button"></button>
+      <button class="project-button"></button>
+      <button class="project-button"></button>
+      <button class="project-button"></button>
+      <button class="project-button"></button>
+      </div><!-- content container -->
+    </div>
+    <div id="contact" class="contact page-view">
+      <div class="content-container">
+       <div class="draggable headings">
+         <h2></h2>
+         <h3></h3>
+       </div> 
+      </div>
+    </div>
+  </div>
+  <!--build:js js/index.min.js-->
+  <script src="./js/index.js"></script>
+  <!--endbuild-->
+</body>
+</html>
