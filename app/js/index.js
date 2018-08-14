@@ -3,6 +3,7 @@
   let navButtons = document.querySelectorAll(".nav-button");
   let windowWidth = window.innerWidth;
   let draggables = document.querySelectorAll(".draggable");
+  let workWindow = document.querySelector('#work')
 
   let state = {
     mouseDown: false,
@@ -74,12 +75,18 @@
         shiftView(event);
       }
 
-      if (event.target.matches(".modal-open")) {
+      if (event.target.matches(".open-modal")) {
         // Run your code to open a modal
+        workWindow.classList.add('modal-open')
       }
 
       if (event.target.matches(".close")) {
         // Run your code to close a modal
+        workWindow.classList.remove('modal-open')
+      }
+
+      if (event.target.matches(".drag-toggle")) {
+        document.body.classList.toggle('view-handles') 
       }
     },
     false
