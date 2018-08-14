@@ -4,8 +4,10 @@
     height: 95%; 
     background-color: rgba(255,255,255,0.8);
     position: absolute;
-    top: 2.5%;
+    bottom: 2.5%;
     right: 2.5%;
-    display: none;
+    border-radius: 5px;
+    // transform: translate(-50%, -50%);
+    // display: none;
   }
 }

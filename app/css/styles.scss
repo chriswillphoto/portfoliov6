@@ -12,6 +12,7 @@ footer {
 }
 header {
   z-index: 10000;
+  position: absolute;
 }
 nav {
   display: flex;
@@ -29,6 +30,7 @@ nav {
     border: 1px solid black;
     box-sizing: border-box;
     border-collapse: collapse;
+    outline: none;
   }
 }
 
