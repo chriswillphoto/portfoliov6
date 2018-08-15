@@ -9,9 +9,17 @@
     border-radius: 5px;
     display: none; 
     flex-wrap: wrap;
+    z-index: 20000;
   }
 
   &.modal-open .project-modal {
     display: flex;
+  }
+
+  .button-grid {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
