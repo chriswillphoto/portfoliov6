@@ -8,12 +8,14 @@
     right: 2.5%;
     border-radius: 5px;
     display: none; 
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     z-index: 20000;
+
+    .close { position: absolute; top: 0; right: 0;}
   }
 
   &.modal-open .project-modal {
-    display: flex;
+    display: block;
   }
 
   .button-grid {
@@ -21,5 +23,13 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 24px 0;
+  }
+
+  .project-button {
+    height: 96px;
+    width: 96px;
+
   }
 }
