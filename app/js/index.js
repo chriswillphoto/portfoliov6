@@ -19,7 +19,6 @@
       el.appendChild(dragHandle);
     });
     viewBox.style.left = 0;
-    console.log('shit');
   }
 
   const shiftView = function(e) {
