@@ -23,15 +23,16 @@
   .button-grid {
     width: 80%;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
-    padding: 24px 0;
+    // padding: 24px 0;
   }
 
   .project-button {
     height: 96px;
     width: 96px;
-
+    margin: 8px 24px 16px;
   }
 }
