@@ -7,17 +7,15 @@
         <title>Christopher William Nekich - A Web Development Portfolio</title>
         <!--build:css css/styles.min.css-->
         <link href="https://unpkg.com/ionicons@4.2.5/dist/css/ionicons.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans" rel="stylesheet">
         <link rel="stylesheet" href="./css/styles.css">
         <!--endbuild-->
     </head>
     <body id="view" class="">
-        <div class="info-modal"> 
-          <h2>About this portfolio</h2>
-          <button class="close">X</button>
-        </div>
+        @@include('./info-modal.html')
         <header>
-            <button class="info-toggle">?</button>
-            <button class="drag-toggle"></button>
+            <button class="neutral-button info-toggle">?</button>
+            <div class="drag-toggle"></div>
         </header>
         <footer class="draggable">
             <nav>
@@ -27,12 +25,12 @@
                 <a href="#" data-left="-300vw" data-view="contact" id="contact-nav" class="nav-button">Contact</a>
             </nav>
         </footer>
-        <div id="viewbox">
+        <main id="viewbox">
             @@include('./home.html') 
             @@include('./about.html')
             @@include('./work.html')
             @@include('./contact.html')
-        </div>
+        </main>
         <!--build:js js/index.min.js-->
         <script src="./js/index.js"></script>
         <!--endbuild-->

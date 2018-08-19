@@ -7,17 +7,25 @@
         <title>Christopher William Nekich - A Web Development Portfolio</title>
         <!--build:css css/styles.min.css-->
         <link href="https://unpkg.com/ionicons@4.2.5/dist/css/ionicons.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans" rel="stylesheet">
         <link rel="stylesheet" href="./css/styles.css">
         <!--endbuild-->
     </head>
     <body id="view" class="">
-        <div class="info-modal"> 
-          <h2>About this portfolio</h2>
-          <button class="close">X</button>
-        </div>
+        <div class="info-modal">
+    <button class="neutral-button close">X</button>
+    <div class="modal-content">
+        <h2>About this portfolio</h2>
+
+        <h4>Finding Feng Shui</h4>
+        <p>Don't like the flow of my UI? Click the toggle, use the click-and-drag handles to move stuff around then
+            <a href="https://twitter.com/theechriswill" target="_blank">send me a screenshot</a> when you've got something good (or very very bad).
+        </p>
+    </div>
+</div>
         <header>
-            <button class="info-toggle">?</button>
-            <button class="drag-toggle"></button>
+            <button class="neutral-button info-toggle">?</button>
+            <div class="drag-toggle"></div>
         </header>
         <footer class="draggable">
             <nav>
@@ -27,7 +35,7 @@
                 <a href="#" data-left="-300vw" data-view="contact" id="contact-nav" class="nav-button">Contact</a>
             </nav>
         </footer>
-        <div id="viewbox">
+        <main id="viewbox">
             <div id="home" class="home page-view">
   <div class="content-container">
     <div class="draggable headings">
@@ -43,7 +51,7 @@
   <div class="content-container">
       <div class="project-modal">
           <div class="content"></div>
-          <button class="close">X</button>
+          <button class="neutral-button close">X</button>
       </div>
       <div class="button-grid">
           <button class="project-button open-modal"></button>
@@ -63,12 +71,16 @@
             <div id="contact" class="contact page-view">
   <div class="content-container">
       <div class="draggable headings">
-          <h2></h2>
-          <h3></h3>
+          <h2>Need me?</h2>
+          <h3>Find me:</h3>
+          <h4><a href="https://www.linkedin.com/in/chris-nekich" target="_blank">LinkedIn</a></h4>
+          <h4><a href="https://twitter.com/theechriswill" target="_blank">Twitter</a></h4>
+          <h4><a href="https://instagram.com/chriswillphoto">Instagram</a></h4>
+          <h4><a href="https://github.com/chriswillphoto" target="_blank">Github</a></h4>
       </div>
   </div>
 </div>
-        </div>
+        </main>
         <!--build:js js/index.min.js-->
         <script src="./js/index.js"></script>
         <!--endbuild-->
