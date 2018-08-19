@@ -9,6 +9,7 @@ var cssnano = require('gulp-cssnano')
 var gulpIf = require('gulp-if')
 var uglify = require('gulp-uglify')
 var babel = require('gulp-babel')
+var fileInclude = require('gulp-file-include');
 
 gulp.task("browserSync", function() {
   browserSync.init({
@@ -32,8 +33,18 @@ gulp.task("sass", function() {
     );
 });
 
+gulp.task("fileinclude", function(){
+  gulp.src('app/components/index.html')
+  .pipe(fileInclude({
+    prefix: "@@",
+    basepath: "@file"
+  }))
+  .pipe(gulp.dest('./app'))
+});
+
 gulp.task("watch", ["browserSync", "sass"], function() {
   gulp.watch("app/css/*.scss", ["sass"]);
+  gulp.watch("app/components/*.html", ["fileinclude"]);
   gulp.watch("app/index.html", browserSync.reload);
   gulp.watch("app/js/index.js", browserSync.reload);
 });
@@ -52,5 +63,5 @@ gulp.task('useref', function(){
 })
 
 gulp.task('build', function(callback){
-  runSequence('clean:dist', ['sass', 'useref'], callback)
+  runSequence('clean:dist', ['sass', 'fileinclude', 'useref'], callback)
 })

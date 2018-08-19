@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Christopher William Nekich - A Web Development Portfolio</title>
+        <!--build:css css/styles.min.css-->
+        <link href="https://unpkg.com/ionicons@4.2.5/dist/css/ionicons.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="./css/styles.css">
+        <!--endbuild-->
+    </head>
+    <body id="view" class="">
+        @@include('./info-modal.html')
+        <header>
+            <button class="neutral-button info-toggle">?</button>
+            <div class="drag-toggle"></div>
+        </header>
+        <footer class="draggable">
+            <nav>
+                <a href="#" data-left="0vw" data-view="home" id="home-nav" class="nav-button">Home</a>
+                <a href="#" data-left="-100vw" data-view="about" id="about-nav" class="nav-button">About</a>
+                <a href="#" data-left="-200vw" data-view="work" id="work-nav" class="nav-button">Work</a>
+                <a href="#" data-left="-300vw" data-view="contact" id="contact-nav" class="nav-button">Contact</a>
+            </nav>
+        </footer>
+        <main id="viewbox">
+            @@include('./home.html') 
+            @@include('./about.html')
+            @@include('./work.html')
+            @@include('./contact.html')
+        </main>
+        <!--build:js js/index.min.js-->
+        <script src="./js/index.js"></script>
+        <!--endbuild-->
+    </body>
+</html>
