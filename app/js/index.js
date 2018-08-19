@@ -3,7 +3,7 @@
   let navButtons = document.querySelectorAll(".nav-button");
   let windowWidth = window.innerWidth;
   let draggables = document.querySelectorAll(".draggable");
-  let workWindow = document.querySelector('#work')
+  let workWindow = document.querySelector("#work");
 
   let state = {
     mouseDown: false,
@@ -11,7 +11,7 @@
     mouseX: 0,
     mouseY: 0
   };
-  
+
   const onStart = () => {
     draggables.forEach(function(el) {
       const dragHandle = document.createElement("i");
@@ -19,7 +19,7 @@
       el.appendChild(dragHandle);
     });
     viewBox.style.left = 0;
-  }
+  };
 
   const shiftView = function(e) {
     const newLeft = e.target.getAttribute("data-left");
@@ -74,18 +74,21 @@
         shiftView(event);
       }
 
+      if (event.target.matches(".info-toggle")) {
+        document.body.classList.toggle("info-modal-open");
+      }
+
       if (event.target.matches(".open-modal")) {
-        // Run your code to open a modal
-        workWindow.classList.add('modal-open')
+        workWindow.classList.add("modal-open");
       }
 
       if (event.target.matches(".close")) {
-        // Run your code to close a modal
-        workWindow.classList.remove('modal-open')
+        workWindow.classList.remove("modal-open");
+        document.body.classList.remove("info-modal-open");
       }
 
       if (event.target.matches(".drag-toggle")) {
-        document.body.classList.toggle('view-handles') 
+        document.body.classList.toggle("view-handles");
       }
     },
     false
@@ -114,7 +117,7 @@
   });
 
   document.addEventListener("mousemove", function(event) {
-    if(state.mouseDown){
+    if (state.mouseDown) {
       mousePosition(event);
     }
   });
