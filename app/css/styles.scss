@@ -22,6 +22,20 @@ h6 {
   font-family: "Fjalla One", Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
+
+.headings,
+a {
+  color: white;
+}
+
+a {
+  transition: all 0.4s;
+}
+
+a:hover {
+  color: #333;
+}
+
 footer {
   position: fixed;
   z-index: 10000;
@@ -50,6 +64,28 @@ nav {
     box-sizing: border-box;
     border-collapse: collapse;
     outline: none;
+
+    &.animate {
+      animation-name: flash;
+      animation-duration: 0.8s;
+      animation-direction: normal;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
+  }
+
+  #home-nav {
+    animation-delay: 0.4s;
+  }
+  #about-nav {
+    animation-delay: 0.8s;
+  }
+  #contact-nav {
+    animation-delay: 1.2s;
+  }
+  #work-nav {
+    animation-delay: 1.6s;
   }
 }
 
@@ -91,7 +127,9 @@ nav {
     position: absolute;
     top: -9px;
     left: -7px;
-    background-color: grey;
+
+    color: white;
+    background-color: transparent;
     z-index: 10000;
   }
 }
@@ -103,7 +141,7 @@ nav {
 .info-modal {
   width: 95%;
   height: 95%;
-  background-color: rgba(255, 255, 255, 0.9P);
+  background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
   bottom: 2.5%;
   right: 2.5%;
@@ -115,8 +153,9 @@ nav {
 
   .modal-content {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; 
+    top: 0;
+    left: 0;
+    width: 100%;
     min-height: 100%;
     padding: 48px 24px;
     overflow-y: scroll;
@@ -217,3 +256,18 @@ nav {
 @import "./about.scss";
 @import "./contact.scss";
 @import "./work.scss";
+
+@keyframes flash {
+  0% {
+    background-color: transparent;
+    color: white;
+  }
+  50% {
+    background-color: white;
+    color: black;
+  }
+  100% {
+    background-color: transparent;
+    color: white;
+  }
+}

@@ -5,6 +5,10 @@
   let draggables = document.querySelectorAll(".draggable");
   let workWindow = document.querySelector("#work");
 
+  navButtons.forEach(function(e, i){
+      e.classList.add('animate')
+  })
+
   let state = {
     mouseDown: false,
     timerID: 0,
@@ -52,15 +56,33 @@
 
       state.selectedEl.style.right = newPosX + "px";
       state.selectedEl.style.bottom = newPosY + "px";
-      console.log(state);
+      // console.log(state);
     }
   };
 
   const mousePosition = function(e) {
+    let newY = 0;
+    let newX = 0;
+    if (0 <= e.clientY && e.clientY <= window.innerHeight) {
+      newY = e.clientY
+    }else if( e.clientY < 0){
+      newY = 0;
+    }else if( e.clientY > window.innerHeight){
+      newY = window.innerHeight;
+    }
+    if (0 <= e.clientX && e.clientX <= window.innerWidth) {
+      newX = e.clientX
+    }else if( e.clientX < 0){
+      newX = 0;
+    }else if( e.clientX > window.innerWidth){
+      newX = window.innerWidth;
+    }
+
+
     state = {
       ...state,
-      mouseX: e.clientX,
-      mouseY: e.clientY
+      mouseX: newX,
+      mouseY: newY
     };
 
     // console.log(state);
