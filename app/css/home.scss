@@ -3,6 +3,11 @@
   
   .headings {
     bottom: 40%; right: 42%;
+
+    @media screen and (max-width: 480px){
+      width: 240px;
+      right: 24%; bottom: 64%;
+    }
   }
 }
 

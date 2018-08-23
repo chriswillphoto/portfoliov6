@@ -2,13 +2,29 @@
   background-image: url(https://res.cloudinary.com/dyqesnour/image/upload/v1532762880/portfoliov5bgs1_lscyhy.png);
 
   .draggable.headings {
-    bottom: 70%; right: 70%;
+    bottom: 70%;
+    right: 82%;
+
+    @media screen and (max-width: 480px) {
+      bottom: 635px;
+      right: 50%;
+      transform: translateX(+50%);
+      text-align: center;
+    }
   }
 
   .about-content {
-    width: 640px; max-width: 100%;
-    bottom: 26%; right: 21%;
+    width: 640px;
+    max-width: 100%;
+    bottom: 26%;
+    right: 50%;
     color: white;
     padding: 16px;
+
+    @media screen and( max-width: 480px ) {
+      bottom: 12%;
+      right: 50%;
+      transform: translateX(+50%);
+    }
   }
 }

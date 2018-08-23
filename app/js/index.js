@@ -47,7 +47,7 @@
 
   const boxPosition = function() {
     if (state.mouseDown) {
-      const offsetWidth = state.selectedEl.offsetWidth;
+      const offsetWidth = state.selectedEl.offsetWidth - ( state.selectedEl.offsetWidth / 2 ); // width of element - allowance for translateX +50%
       const offsetHeight = state.selectedEl.offsetHeight;
       const mouseOffsetX = window.innerWidth - state.mouseX;
       const mouseOffsetY = window.innerHeight - state.mouseY;

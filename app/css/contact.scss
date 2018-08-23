@@ -3,7 +3,12 @@
 
   .draggable.headings {
     bottom: 70%; right: 70%;
-
+    
+    @media screen and (max-width: 480px) {
+      transform: translateX(+50%);
+      width: 100%;
+      bottom: 73%; right: 40%;
+    }
 
     h4 {
       display: inline-block;
