@@ -28,6 +28,8 @@
     // grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
     // padding: 24px 0;
+    position: relative;
+    height: 100%;
   }
 
   .project-button {
@@ -35,5 +37,9 @@
     width: 96px;
     // margin: 8px 24px 16px;
     border-radius: 24px;
+  }
+
+  .button-container {
+    bottom: calc(100% - 96px); right: calc(100% - 48px);
   }
 }
