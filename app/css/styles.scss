@@ -13,6 +13,7 @@ div {
   padding: 0;
   font-family: "Noto Sans", Arial, Helvetica, sans-serif;
   font-size: 16px;
+  transform-origin: 0 0;
 }
 h1,
 h2,
@@ -120,7 +121,7 @@ nav {
   height: 100%;
   position: relative;
   min-height: max-content;
-  overflow-y: hidden;
+  overflow-y: scroll;
 
   @media screen and (max-width: 480px){
     overflow-y: scroll;
@@ -133,12 +134,12 @@ nav {
 
 .draggable {
   position: absolute;
-  transform: translateX(+50%);
+  transform: translateX(+50%) translateY(0%);
 
   .drag-handle {
     display: none;
     position: absolute;
-    top: -9px;
+    top: -14px;
     left: -7px;
 
     color: white;

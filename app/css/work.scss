@@ -40,6 +40,9 @@
   }
 
   .button-container {
-    bottom: calc(100% - 96px); right: calc(100% - 48px);
+    bottom: calc(100% - 96px); right: 100%;
+    // transition: all 1.2s;
+    transform: translateX(+200%) translateY(+0%);
+
   }
 }
