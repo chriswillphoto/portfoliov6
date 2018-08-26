@@ -70,6 +70,7 @@ nav {
 
     &.animate {
       animation-name: flash;
+      animation-delay: 0.8s;
       animation-duration: 0.8s;
       animation-direction: normal;
       animation-iteration-count: 1;
@@ -121,8 +122,8 @@ nav {
   height: 100%;
   position: relative;
   min-height: max-content;
+  opacity: 0;
   overflow-y: scroll;
-
   @media screen and (max-width: 480px){
     overflow-y: scroll;
   }
@@ -132,6 +133,15 @@ nav {
   }
 }
 
+.active-view .content-container {
+  animation-name: fadeIn;
+  animation-delay: 0.4s;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+ 
+}
+
 .draggable {
   position: absolute;
   transform: translateX(+50%) translateY(0%);
@@ -139,8 +149,9 @@ nav {
   .drag-handle {
     display: none;
     position: absolute;
-    top: -14px;
+    top: 0;
     left: -7px;
+    transform: translateY(-50%);
 
     color: white;
     background-color: transparent;
@@ -284,4 +295,14 @@ nav {
     background-color: transparent;
     color: white;
   }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0 ;}
 }

@@ -4,6 +4,7 @@
   let windowWidth = window.innerWidth;
   let draggables = document.querySelectorAll(".draggable");
   let workWindow = document.querySelector("#work");
+  let pageViews = document.querySelectorAll('.page-view');
 
   navButtons.forEach(function(e, i){
       e.classList.add('animate')
@@ -23,11 +24,20 @@
       el.appendChild(dragHandle);
     });
     viewBox.style.left = 0;
+
+    document.querySelector('#home').classList.add('active-view');
   };
 
   const shiftView = function(e) {
-    const newLeft = e.target.getAttribute("data-left");
     e.preventDefault();
+    pageViews.forEach(function(view){
+      view.classList.remove('active-view');
+    })
+    const newLeft = e.target.getAttribute("data-left");
+    let activeView = e.target.getAttribute('data-view');
+    
+    document.querySelector('#'+activeView).classList.add('active-view');
+
     if (viewBox.style.left != newLeft) {
       viewBox.style.left = newLeft;
     }
