@@ -1,4 +1,4 @@
-$button-sprites: "https://res.cloudinary.com/dyqesnour/image/upload/v1535880072/Portfolio/workSprites.png"
+$button-sprites: "https://res.cloudinary.com/dyqesnour/image/upload/v1535880072/Portfolio/workSprites.png";
 
 #work {
   background-image: url(https://res.cloudinary.com/dyqesnour/image/upload/v1532762880/portfoliov5bgs2_ifukft.png);
@@ -51,9 +51,8 @@ $button-sprites: "https://res.cloudinary.com/dyqesnour/image/upload/v1535880072/
     bottom: calc((100% - 96px) - 24px); right: 100%;
     // transition: all 1.2s;
     transform: translateX(+150%) translateY(+0%);
-<<<<<<< HEAD
     background-image: url($button-sprites);
-=======
+
 
     &:nth-of-type(2), &:nth-of-type(6), &:nth-of-type(10){ right: 75%; }
     &:nth-of-type(3), &:nth-of-type(7){ right: 50%; }
