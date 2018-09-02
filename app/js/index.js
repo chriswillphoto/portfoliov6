@@ -5,6 +5,8 @@
   let draggables = document.querySelectorAll(".draggable");
   let workWindow = document.querySelector("#work");
   let pageViews = document.querySelectorAll('.page-view');
+  // let workButtons = document.querySelectorAll('.button-container');
+
 
   navButtons.forEach(function(e, i){
       e.classList.add('animate')
@@ -33,6 +35,7 @@
     pageViews.forEach(function(view){
       view.classList.remove('active-view');
     })
+
     const newLeft = e.target.getAttribute("data-left");
     let activeView = e.target.getAttribute('data-view');
     
@@ -97,6 +100,8 @@
 
     // console.log(state);
   };
+
+
 
   // event delegation
   document.addEventListener(

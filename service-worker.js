@@ -1,1 +1,1 @@
-console.log('service worker will go here')
+console.log('service worker will go here');
