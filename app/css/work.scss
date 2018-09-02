@@ -51,7 +51,7 @@ $button-sprites: "https://res.cloudinary.com/dyqesnour/image/upload/v1535880072/
     bottom: calc((100% - 96px) - 24px); right: 100%;
     // transition: all 1.2s;
     transform: translateX(+150%) translateY(+0%);
-    background-image: url($button-sprites);
+    
 
 
     &:nth-of-type(2), &:nth-of-type(6), &:nth-of-type(10){ right: 75%; }
@@ -60,7 +60,21 @@ $button-sprites: "https://res.cloudinary.com/dyqesnour/image/upload/v1535880072/
     &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(8), &:nth-of-type(7){ bottom: calc((100% - 192px) - 48px);}
     &:nth-of-type(9), &:nth-of-type(10), &:nth-of-type(11), &:nth-of-type(12){ bottom: calc((100% - 288px) - 72px);}
     
-
->>>>>>> 7e961fdc92f4ae43aaa91a315bf414fe0c1d14eb
+    button {
+      background: url($button-sprites);
+      background-size: unset;
+    }
+  
+    &:nth-of-type(1) button{
+      background-position: -1px 0px !important;
+    }
+  
+  }
+    @for $i from 1 through 9 {
+    .button-container:nth-of-type(#{$i}) button {
+      background-position: #{$i * 96 - 97}px 0px;
+    }
   }
 }
+
+
