@@ -1,3 +1,5 @@
+$button-sprites: "https://res.cloudinary.com/dyqesnour/image/upload/v1535880072/Portfolio/workSprites.png"
+
 #work {
   background-image: url(https://res.cloudinary.com/dyqesnour/image/upload/v1532762880/portfoliov5bgs2_ifukft.png);
 
@@ -43,6 +45,6 @@
     bottom: calc(100% - 96px); right: 100%;
     // transition: all 1.2s;
     transform: translateX(+150%) translateY(+0%);
-
+    background-image: url($button-sprites);
   }
 }
