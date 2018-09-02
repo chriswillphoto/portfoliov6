@@ -13,11 +13,17 @@
     // flex-wrap: wrap;
     z-index: 20000;
 
-    .close { position: absolute; top: 0; right: 0;}
+    .close { position: absolute; /* top: 0; right: 0; */}
   }
 
-  &.modal-open .project-modal {
-    display: block;
+  &.modal-open {
+    .project-modal {
+      display: block;
+    }
+
+    .content-container { 
+      z-index: 10000;
+    }
   }
 
   .button-grid {
@@ -40,9 +46,16 @@
   }
 
   .button-container {
-    bottom: calc(100% - 96px); right: 100%;
+    bottom: calc((100% - 96px) - 24px); right: 100%;
     // transition: all 1.2s;
     transform: translateX(+150%) translateY(+0%);
+
+    &:nth-of-type(2), &:nth-of-type(6), &:nth-of-type(10){ right: 75%; }
+    &:nth-of-type(3), &:nth-of-type(7){ right: 50%; }
+    &:nth-of-type(4), &:nth-of-type(8){ right: 25%; }      
+    &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(8), &:nth-of-type(7){ bottom: calc((100% - 192px) - 48px);}
+    &:nth-of-type(9), &:nth-of-type(10), &:nth-of-type(11), &:nth-of-type(12){ bottom: calc((100% - 288px) - 72px);}
+    
 
   }
 }
