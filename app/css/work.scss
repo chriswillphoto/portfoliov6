@@ -1,29 +1,33 @@
 $button-sprites: "https://res.cloudinary.com/dyqesnour/image/upload/v1535880072/Portfolio/workSprites.png";
+$gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 100%);
 
 #work {
   background-image: url(https://res.cloudinary.com/dyqesnour/image/upload/v1532762880/portfoliov5bgs2_ifukft.png);
 
   .project-modal {
     width: 95%;
-    height: 95%; 
-    background-color: rgba(255,255,255,0.9);
+    height: 95%;
+    background-color: rgba(255, 255, 255, 0.9);
     position: absolute;
     bottom: 2.5%;
     right: 2.5%;
     border-radius: 5px;
-    display: none; 
+    display: none;
     // flex-wrap: wrap;
     z-index: 20000;
 
-    .close { position: absolute; /* top: 0; right: 0; */}
+    .close {
+      position: absolute; /* top: 0; right: 0; */
+    }
   }
 
   &.modal-open {
     .project-modal {
       display: block;
+      animation: fadeIn 0.4s ease-in-out 0s 1 normal forwards;
     }
 
-    .content-container { 
+    .content-container {
       z-index: 10000;
     }
   }
@@ -48,33 +52,68 @@ $button-sprites: "https://res.cloudinary.com/dyqesnour/image/upload/v1535880072/
   }
 
   .button-container {
-    bottom: calc((100% - 96px) - 24px); right: 100%;
+    bottom: calc((100% - 96px) - 24px);
+    right: 100%;
     // transition: all 1.2s;
     transform: translateX(+150%) translateY(+0%);
-    
 
+    &:nth-of-type(2),
+    &:nth-of-type(6),
+    &:nth-of-type(10) {
+      right: 75%;
+    }
+    &:nth-of-type(3),
+    &:nth-of-type(7) {
+      right: 50%;
+    }
+    &:nth-of-type(4),
+    &:nth-of-type(8) {
+      right: 25%;
+    }
+    &:nth-of-type(5),
+    &:nth-of-type(6),
+    &:nth-of-type(8),
+    &:nth-of-type(7) {
+      bottom: calc((100% - 192px) - 48px);
+    }
+    &:nth-of-type(9),
+    &:nth-of-type(10),
+    &:nth-of-type(11),
+    &:nth-of-type(12) {
+      bottom: calc((100% - 288px) - 72px);
+    }
 
-    &:nth-of-type(2), &:nth-of-type(6), &:nth-of-type(10){ right: 75%; }
-    &:nth-of-type(3), &:nth-of-type(7){ right: 50%; }
-    &:nth-of-type(4), &:nth-of-type(8){ right: 25%; }      
-    &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(8), &:nth-of-type(7){ bottom: calc((100% - 192px) - 48px);}
-    &:nth-of-type(9), &:nth-of-type(10), &:nth-of-type(11), &:nth-of-type(12){ bottom: calc((100% - 288px) - 72px);}
-    
     button {
-      background: url($button-sprites);
-      background-size: unset;
+      box-shadow: white 0 0 4px 0px;
+      transition: opacity 0.4s;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
-  
-    &:nth-of-type(1) button{
-      background-position: -1px 0px !important;
-    }
-  
   }
-    @for $i from 1 through 9 {
+  @for $i from 1 through 8 {
     .button-container:nth-of-type(#{$i}) button {
+      background: url($button-sprites), $gradient1;
       background-position: #{$i * 96 - 97}px 0px;
     }
   }
+
+  .project-modal {
+    overflow: scroll;
+    .words {
+      padding: 12px 32px;
+      h2 {
+        text-align: center;
+      }
+      a { color: #B9D8FF; margin-right: 12px;}
+
+      .tech {
+        display: flex;
+        margin-bottom: 24px;
+        .stack, .lib { width: 50%; }
+      }
+    }
+  }
 }
-
-
