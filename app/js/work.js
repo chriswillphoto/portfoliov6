@@ -40,6 +40,7 @@ const hotboxDesc = `<div class="words">
 <div class="link-box">
 <a href="http://hotboxing.herokuapp.com" target="_blank">Live Site</a>
 <a href="https://github.com/chriswillphoto/hotbox" target="_blank">Github Repo</a>
+<p><small>(N.B. This project is hosted on heroku, and will need a minute or two to "wake up")</small></p>
 </div>
 </div>`;
 
@@ -64,6 +65,7 @@ back end through the means of ajax requests. User authentication is done through
 <div class="link-box">
 <a href="https://chriswillphoto.github.io/grumble/" target="_blank">Live Site</a>
 <a href="https://github.com/chriswillphoto/grumble" target="_blank">Github Repo</a>
+<p><small>(N.B. The backend for this project is hosted on heroku, and will need a minute or two to "wake up")</small></p>
 </div>
 </div>`;
 
@@ -85,6 +87,7 @@ const quotDesc = `<div class="words">
 <div class="link-box">
 <a href="https://chriswillphoto.github.io/quot-app/" target="_blank">Live Site</a>
 <a href="https://github.com/chriswillphoto/quot-app" target="_blank">Github Repo</a>
+<p><small>(N.B. The backend for this project is hosted on heroku, and will need a minute or two to "wake up")</small></p>
 </div>
 </div>`;
 
@@ -127,6 +130,7 @@ of creation.</p>
 <div class="link-box">
 <a href="https://pixeldeli.herokuapp.com" target="_blank">Live Site</a>
 <a href="https://github.com/chriswillphoto/everybodypaint" target="_blank">Github Repo</a>
+<p><small>(N.B. This project is hosted on heroku, and will need a minute or two to "wake up")</small></p>
 </div>
 </div>`;
 

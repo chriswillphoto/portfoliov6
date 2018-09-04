@@ -126,6 +126,7 @@ nav {
   overflow-y: scroll;
   @media screen and (max-width: 480px){
     overflow-y: scroll;
+    height: calc(100% - 120px);
   }
 
   &:hover {

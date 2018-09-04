@@ -6,7 +6,7 @@
     right: 82%;
 
     @media screen and (max-width: 480px) {
-      bottom: 635px;
+      bottom: 70%;
       right: 50%;
       transform: translateX(+50%);
       text-align: center;
@@ -15,14 +15,14 @@
 
   .about-content {
     width: 640px;
-    max-width: 100%;
+    max-width: 80%;
     bottom: 26%;
     right: 50%;
     color: white;
     padding: 16px;
 
     @media screen and( max-width: 480px ) {
-      bottom: 12%;
+      bottom: -90%;
       right: 50%;
       transform: translateX(+50%);
     }
