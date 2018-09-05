@@ -3,6 +3,7 @@ $neutral-buttons: hsl(0, 0, 34.5%);
 $neutral-button-box: hsl(0, 0, 24.5%);
 $light-buttons: #fffdff;
 $light-button-box: #cccbcc;
+$link-color: #8DAFFF;
 
 // global styles
 body,
@@ -187,7 +188,7 @@ nav {
     overflow-y: scroll;
 
     a {
-      color: #777;
+      color: $link-color;
 
       &:hover {
         color: #ccc;
@@ -287,6 +288,7 @@ nav {
 
 .info-modal-open .info-modal {
   display: block;
+  animation: fadeIn 0.4s ease-in-out 1 normal forwards;
 }
 
 //page specific

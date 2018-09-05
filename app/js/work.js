@@ -145,6 +145,16 @@ const projectDescriptions = [
 ];
 
 const projectButtons = document.querySelectorAll(".project-button");
+const buttonContainers = document.querySelectorAll(".button-container");
+
+buttonContainers.forEach(function(e, i){
+  if(i < 4){
+    e.setAttribute('data-col', i + 1);
+  }else{
+    e.setAttribute('data-col', i - 4 + 1);
+  }
+})
+
 projectButtons.forEach(function(e, i) {
   e.setAttribute("data-desc-order", i);
 });

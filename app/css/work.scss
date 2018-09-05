@@ -53,35 +53,32 @@ $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 
 
   .button-container {
     bottom: calc((100% - 96px) - 24px);
-    right: 100%;
+    right: calc(100% - 96px);
     // transition: all 1.2s;
-    transform: translateX(+150%) translateY(+0%);
+    // transform: translateX(+200%) translateY(+0%);
 
-    &:nth-of-type(2),
-    &:nth-of-type(6),
-    &:nth-of-type(10) {
-      right: 75%;
+    @for $i from 1 through 4 {
+      &[data-col="#{$i}"]{
+        right: #{100% - (20 * $i)};
+      }
     }
-    &:nth-of-type(3),
-    &:nth-of-type(7) {
-      right: 50%;
-    }
-    &:nth-of-type(4),
-    &:nth-of-type(8) {
-      right: 25%;
-    }
-    &:nth-of-type(5),
-    &:nth-of-type(6),
-    &:nth-of-type(8),
-    &:nth-of-type(7) {
-      bottom: calc((100% - 192px) - 48px);
-    }
-    &:nth-of-type(9),
-    &:nth-of-type(10),
-    &:nth-of-type(11),
-    &:nth-of-type(12) {
-      bottom: calc((100% - 288px) - 72px);
-    }
+
+    // &[data-col="1"]{
+    //   right: 80%;
+      
+    // }
+
+    // &[data-col="2"]{
+    //   right: 60%;
+    // }
+
+    // &[data-col="3"]{
+    //   right: 40%;
+    // }
+
+    // &[data-col="4"]{
+    //   right: 20%;
+    // }
 
     button {
       box-shadow: white 0 0 4px 0px;
@@ -93,11 +90,12 @@ $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 
       }
     }
   }
+
   @for $i from 1 through 8 {
     .button-container:nth-of-type(#{$i}) button {
       background: url($button-sprites), $gradient1;
       background-position: #{$i * 96 - 97}px 0px;
-      background-size: cover;
+      background-size: auto 96px;
 
       @media screen and (max-width: 480px) {
         height: 76px;
@@ -115,7 +113,7 @@ $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 
       h2 {
         text-align: center;
       }
-      a { color: #8DAFFF; margin-right: 12px;}
+      a { color: $link-color; margin-right: 12px;}
 
       .tech {
         display: flex;
