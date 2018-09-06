@@ -158,5 +158,7 @@
       mousePosition(event);
     }
   });
+
   onStart();
+  
 })();

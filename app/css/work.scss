@@ -32,6 +32,12 @@ $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 
     }
   }
 
+  .draggable.headings {
+    right: calc(80% - 50px);
+    width: 200px;
+    bottom: 80%;
+  }
+
   .button-grid {
     width: 80%;
     margin: 0 auto;
@@ -52,7 +58,7 @@ $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 
   }
 
   .button-container {
-    bottom: calc((100% - 96px) - 24px);
+    bottom: calc((100% - 96px) - 20%);
     right: calc(100% - 96px);
     // transition: all 1.2s;
     // transform: translateX(+200%) translateY(+0%);
@@ -73,7 +79,7 @@ $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 
         }
       }@else{
         &:nth-child(#{$i}){
-          bottom: calc(80% - 96px);
+          bottom: calc(60% - 96px);
           }
 
           button[data-desc-order="#{$i - 1}"] {
@@ -82,49 +88,16 @@ $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 
       }
     }
 
-
-    // &[data-col="1"]{
-    //   right: 80%;
-      
-    // }
-
-    // &[data-col="2"]{
-    //   right: 60%;
-    // }
-
-    // &[data-col="3"]{
-    //   right: 40%;
-    // }
-
-    // &[data-col="4"]{
-    //   right: 20%;
-    // }
-
     button {
       box-shadow: white 0 0 4px 0px;
-      transition: opacity 0.4s;
+      transition: box-shadow 0.4s;
       cursor: pointer;
 
       &:hover {
-        opacity: 0.8;
+        box-shadow: white 0 0 12px 3px;
       }
     }
   }
-
-  // @for $j from 1 through 8 {
-  //   .button-container:nth-of-type(#{$j}) button {
-  //     background: url($button-sprites), $gradient1;
-  //     background-position: #{$j * 96 - 97}px 0px;
-  //     background-size: auto 96px;
-
-  //     @media screen and (max-width: 480px) {
-  //       height: 76px;
-  //       width: 76px;
-  //       background-size: auto 76px;
-  //       background-position: #{$j * 76 - 77}px 0px; 
-  //     }
-  //   }
-  // }
 
   .project-modal {
     overflow: scroll;
