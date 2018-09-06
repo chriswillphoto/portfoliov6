@@ -4,7 +4,7 @@ const effthegymDesc =
   '<div class="words"><h2>Eff The Gym</h2><p>Eff The Gym is a first attempt at a Progressive Web App (PWA). Built in React and Redux, the aim of this app is to provide a simple  means to tracking workouts in the gym. Users create workouts, fill them with exercises and then cycle through them one at a time, either by sets  or by time, until the workout is complete. Designed for mobile, because not too many people take their laptops to the gym. Currently a work in progress. </p><div class="tech">  <div class="stack">    <h5>Tech Stack</h5>    <p>React</p>    <p>Google Firebase</p>  </div>  <div class="lib">    <h5>Libraries</h5>    <p>Redux</p>    <p>firebase</p>  </div></div><div class="link-box"><a href="https://effthegym.firebaseapp.com/#/" target="_blank">Live Site</a><a href="https://github.com/chriswillphoto/effthegym" target="_blank">Github Repo</a></div></div>';
 const soundbarDesc = `<div class="words">
 <h2>Soundbar</h2>
-<img class="image" src='http://res.cloudinary.com/dyqesnour/image/upload/c_scale,q_60,w_800/v1517654901/Screen_Shot_2018-01-06_at_12.41.56_pm_le3axp.png' />
+<img class="image" src='https://res.cloudinary.com/dyqesnour/image/upload/c_scale,q_60,w_800/v1517654901/Screen_Shot_2018-01-06_at_12.41.56_pm_le3axp.png' />
 <p>SoundBar is a noisemaking toy. Various sampled sounds, each paired to a different animation and key, make for a synesthetic in-browser beat pad.</p>
 <div class="tech">
   <div class="stack">
