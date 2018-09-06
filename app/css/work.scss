@@ -106,7 +106,15 @@ $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 
       h2 {
         text-align: center;
       }
-      a { color: $link-color; margin-right: 12px;}
+
+      img {
+        max-width: 480px;
+        width:100%;
+        display: block;
+        margin: 0 auto;
+        
+      }
+      a { color: $link-color; margin-right: 12px; }
 
       .tech {
         display: flex;
