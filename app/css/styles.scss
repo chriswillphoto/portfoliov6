@@ -26,6 +26,8 @@ h6 {
   font-weight: 700;
 }
 
+button:focus, button:active { outline: none; }
+
 .headings,
 a {
   color: white;

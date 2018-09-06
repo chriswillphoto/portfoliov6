@@ -57,11 +57,31 @@ $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 
     // transition: all 1.2s;
     // transform: translateX(+200%) translateY(+0%);
 
-    @for $i from 1 through 4 {
-      &[data-col="#{$i}"]{
-        right: #{100% - (20 * $i)};
+    .project-button {
+      background: url($button-sprites), $gradient1;
+      background-size: auto 96px;
+    }
+
+    @for $i from 1 through 8 {
+      @if ($i < 5){
+        &[data-col="#{$i}"]{
+          right: #{100% - (20 * $i)};
+        }
+
+        button[data-desc-order="#{$i - 1}"] {
+          background-position: #{$i * 96 - 97}px 0px;
+        }
+      }@else{
+        &:nth-child(#{$i}){
+          bottom: calc(80% - 96px);
+          }
+
+          button[data-desc-order="#{$i - 1}"] {
+            background-position: #{$i * 96 - 97}px 0px;
+        }
       }
     }
+
 
     // &[data-col="1"]{
     //   right: 80%;
@@ -91,20 +111,20 @@ $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 
     }
   }
 
-  @for $i from 1 through 8 {
-    .button-container:nth-of-type(#{$i}) button {
-      background: url($button-sprites), $gradient1;
-      background-position: #{$i * 96 - 97}px 0px;
-      background-size: auto 96px;
+  // @for $j from 1 through 8 {
+  //   .button-container:nth-of-type(#{$j}) button {
+  //     background: url($button-sprites), $gradient1;
+  //     background-position: #{$j * 96 - 97}px 0px;
+  //     background-size: auto 96px;
 
-      @media screen and (max-width: 480px) {
-        height: 76px;
-        width: 76px;
-        background-size: auto 76px;
-        background-position: #{$i * 76 - 77}px 0px; 
-      }
-    }
-  }
+  //     @media screen and (max-width: 480px) {
+  //       height: 76px;
+  //       width: 76px;
+  //       background-size: auto 76px;
+  //       background-position: #{$j * 76 - 77}px 0px; 
+  //     }
+  //   }
+  // }
 
   .project-modal {
     overflow: scroll;
