@@ -135,14 +135,35 @@ of creation.</p>
 </div>
 </div>`;
 
+const portfolios = `<div class="words">
+<h2>Previous portfolios</h2>
+<p>These are the previous versions of this portfolio</p>
+<div class="tech">
+  <div class="stack">
+    <h5>Tech Stack</h5>
+    <p>Ruby-on-Rails</p>
+  </div>
+  <div class="lib">
+    <h5>Libraries</h5>
+    <p>jQuery</p>
+  </div>
+</div> <!-- tech -->
+<div class="link-box">
+<a href="https://pixeldeli.herokuapp.com" target="_blank">Live Site</a>
+<a href="https://github.com/chriswillphoto/everybodypaint" target="_blank">Github Repo</a>
+<p><small>(N.B. This project is hosted on heroku, and will need a minute or two to "wake up")</small></p>
+</div>
+</div>`;
+
 const projectDescriptions = [
   effthegymDesc,
-  soundbarDesc,
-  hotboxDesc,
-  grumbleDesc,
-  quotDesc,
+  pixelDeli,
   scrillDesc,
-  pixelDeli
+  quotDesc,
+  grumbleDesc,
+  hotboxDesc,
+  soundbarDesc,
+  portfolios
 ];
 
 const projectButtons = document.querySelectorAll(".project-button");

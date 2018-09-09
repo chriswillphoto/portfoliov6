@@ -1,4 +1,5 @@
-$button-sprites: "https://res.cloudinary.com/dyqesnour/image/upload/v1535880072/Portfolio/workSprites.png";
+// $button-sprites: "https://res.cloudinary.com/dyqesnour/image/upload/v1535880072/Portfolio/workSprites.png";
+$button-sprites: "https://res.cloudinary.com/dyqesnour/image/upload/v1536459281/Portfolio/workSprites.png";
 $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 100%);
 
 #work {
@@ -84,20 +85,22 @@ $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 
         }
 
         button[data-desc-order="#{$i - 1}"] {
-          background-position: #{$i * 96 - 97}px 0px;
-          
+          // background-position: #{$i * 96 - 97}px 0px;
+          background-position: #{ 95 - $i * 96}px 0px;
+
           @media screen and (max-width: 480px) {
             background-position: #{$i * 72 - 73}px 0px;
           }
         }
       } @else {
-        &:nth-child(#{$i}) {
+        &:nth-child(#{$i + 2}) {
           bottom: calc(60% - 96px);
         }
 
         button[data-desc-order="#{$i - 1}"] {
-          background-position: #{$i * 96 - 97}px 0px;
+          // background-position: #{$i * 96 - 97}px 0px;
 
+          background-position: #{ 95 - $i * 96}px 0px;
           @media screen and (max-width: 480px) {
             background-position: #{$i * 72 - 73}px 0px;
           }
