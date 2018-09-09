@@ -67,5 +67,5 @@ gulp.task("useref", function() {
 });
 
 gulp.task("build", function(callback) {
-  runSequence("clean:dist", ["sass", "fileinclude", "useref"], callback);
+  runSequence(["clean:dist", "sass"], ["fileinclude", "useref"], callback);
 });
