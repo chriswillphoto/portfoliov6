@@ -123,7 +123,7 @@ const scrillDesc = `<div class="words">
 const pixelDeli = `<div class="words">
 <h2>Pixel Deli</h2>
 <img class="image" src='https://res.cloudinary.com/dyqesnour/image/upload/c_scale,q_60,w_800/v1517653749/Screen_Shot_2018-02-03_at_9.28.14_pm_evh9oo.png' />
-<p>Pixel Deli is a collaborative art project, much like r/place. As users sign in, they are placed in a queue, with the first in line able to pick a color from the rainbow and place it
+<p>Pixel Deli is a project focused on collaborative art, much like r/place. As users sign in, they are placed in a queue, with the first in line able to pick a color from the rainbow and place it
 down on the 'canvas' (10000 divs). They are then given the option to rejoin the back of the queue. This creates an opportunity for an ever changing communal art piece, bringing people together in the act
 of creation.</p>
 <div class="tech">
