@@ -86,10 +86,10 @@ $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 
 
         button[data-desc-order="#{$i - 1}"] {
           // background-position: #{$i * 96 - 97}px 0px;
-          background-position: #{ 95 - $i * 96}px 0px;
+          background-position: #{95 - $i * 96}px 0px;
 
           @media screen and (max-width: 480px) {
-            background-position: #{$i * 72 - 73}px 0px;
+            background-position: #{71 - $i * 72}px 0px;
           }
         }
       } @else {
@@ -100,9 +100,9 @@ $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 
         button[data-desc-order="#{$i - 1}"] {
           // background-position: #{$i * 96 - 97}px 0px;
 
-          background-position: #{ 95 - $i * 96}px 0px;
+          background-position: #{95 - $i * 96}px 0px;
           @media screen and (max-width: 480px) {
-            background-position: #{$i * 72 - 73}px 0px;
+            background-position: #{71 - $i * 72}px 0px;
           }
         }
       }
