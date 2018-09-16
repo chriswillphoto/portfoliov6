@@ -48,11 +48,13 @@
   const dragHandler = function(e) {
     if (!state.mouseDown) {
       const timerId = setInterval(boxPosition, 100);
+      const parentEl = e.target.parentElement.parentElement;
       state = {
         ...state,
         mouseDown: true,
         timerID: timerId,
-        selectedEl: e.target.parentElement
+        selectedEl: e.target.parentElement,
+        parentEl: parentEl
       };
     }
   };
@@ -61,12 +63,12 @@
     if (state.mouseDown) {
       const offsetWidth = state.selectedEl.offsetWidth - state.selectedEl.offsetWidth / 2; // width of element - allowance for translateX +50%
       const offsetHeight = state.selectedEl.offsetHeight;
-      const mouseOffsetX = window.innerWidth - state.mouseX;
-      const mouseOffsetY = window.innerHeight - state.mouseY;
+      // const mouseOffsetX = window.innerWidth - state.mouseX;
+      // const mouseOffsetY = window.innerHeight - state.mouseY;
+      const mouseOffsetX = state.parentEl.clientWidth - state.mouseX;
+      const mouseOffsetY = state.parentEl.clientHeight - state.mouseY;
       const newPosX = mouseOffsetX - offsetWidth;
       const newPosY = mouseOffsetY - offsetHeight;
-      console.log(mouseOffsetY)
-      console.log(newPosY)
 
       state.selectedEl.style.right = newPosX + "px";
       state.selectedEl.style.bottom = newPosY + "px";
@@ -165,7 +167,7 @@
         mousePosition(event.touches[0].clientX, event.touches[0].clientY);
         dragHandler(event);
       }
-      // console.log(event.target)
+      console.log(event.target.parentElement.parentElement)
     },
     false
   );
