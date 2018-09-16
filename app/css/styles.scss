@@ -28,6 +28,10 @@ h6 {
 
 button:focus, button:active { outline: none; }
 
+body {
+  overflow: hidden;
+}
+
 .headings,
 a {
   color: white;

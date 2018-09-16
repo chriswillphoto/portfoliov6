@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="The online portfolio for Christopher William Nekich - Professional Web Developer">
+        <title>Christopher William Nekich - A Web Development Portfolio</title>
+        <link rel="stylesheet" href="css/styles.min.css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans" rel="stylesheet">
+        <link href="https://unpkg.com/ionicons@4.2.5/dist/css/ionicons.min.css" rel="stylesheet">
+
+    </head>
+    <body id="view" class="">
+        <div class="info-modal">
+    <button class="neutral-button close">X</button>
+    <div class="modal-content">
+        <h2>About this portfolio</h2>
+
+        <h4>Finding Feng Shui</h4>
+        <p>Don't like the flow of my UI? Click the toggle, use the click-and-drag handles to move stuff around then
+            <a href="https://twitter.com/theechriswill" target="_blank">send me a screenshot</a>
+            when you've got something good (or very very bad).
+        </p>
+
+        <h4>What is this place?</h4>
+        <p>All the features of this portfolio were written by me in vanilla JS because having an understanding of the fundamentals is important to me. I used SCSS to modulate my css and make use of functions, and used gulp to tie everything together and make for a nicer dev environment.</p>
+    </div>
+</div>
+        <header>
+            <button class="neutral-button info-toggle">?</button>
+            <div class="drag-toggle"></div>
+        </header>
+        <footer class="draggable">
+            <nav>
+                <a href="#" data-left="0vw" data-view="home" id="home-nav" class="nav-button">Home</a>
+                <a href="#" data-left="-100vw" data-view="about" id="about-nav" class="nav-button">About</a>
+                <a href="#" data-left="-200vw" data-view="work" id="work-nav" class="nav-button">Work</a>
+                <a href="#" data-left="-300vw" data-view="contact" id="contact-nav" class="nav-button">Contact</a>
+            </nav>
+        </footer>
+        <main id="viewbox">
+            <div id="home" class="home page-view">
+  <div class="content-container">
+    <div class="draggable headings">
+        <h1>A Web Development Portfolio</h1>
+        <h3>by Christopher William Nekich</h3>
+    </div>
+  </div>
+</div>
+ 
+            <div id="about" class="about page-view">
+    <div class="content-container">
+        <div class="draggable headings">
+            <h2>What I'm About</h2>
+            <h3>A little about me</h3>
+        </div>
+
+        <div class="about-content draggable">
+            <p>I just like to make things. It's always been that way. Stacking lego, throwing paint at a canvas, or better yet - my bedroom walls (sorry Mum!), playing with cameras or nailing blocks of wood together for no apparent reason; I revel in the act of creative expression and I live to solve a problem.</p>
+
+            <p>The projects displayed here were created during my time as a Web Development student at General Assembly, where I put my affinity for making and problem solving to good use. Over a 3 month, full time course, I made things every day. I explored, I experimented and I loved every minute of it.</p>
+            <p>Perhaps I could make things for you?</p>
+            <p>I am currently working as a Junior Front End Developer for a digital agency in Surry Hills</p>
+        </div>
+    </div>
+
+</div>
+            <div id="work" class="work page-view">
+    <div class="content-container">
+        <div class="project-modal">
+            <div class="content"></div>
+            <button class="neutral-button close">X</button>
+        </div>
+        <!-- <div class="button-grid"> -->
+            <div class="draggable headings">
+                <h3>Personal Projects</h3>
+            </div>
+            <div class="button-container draggable">
+                <button class="project-button open-modal" id="effthegym"></button>
+                <h5>EffTheGym</h5>
+            </div>
+            <div class="button-container draggable">
+                <button class="project-button open-modal" id="pixeldeli"></button>
+                <h5>Pixel Deli</h5>
+            </div>
+            <div class="button-container draggable">
+                <button class="project-button open-modal" id="scrilla"></button>
+                <h5>Scrilla</h5>
+            </div>
+            <div class="button-container draggable">
+                <button class="project-button open-modal" id="quot"></button>
+                <h5>&amp;quot;</h5>
+            </div>
+            <div class="button-container draggable">
+                <button class="project-button open-modal" id="grumble"></button>
+                <h5>Grumble</h5>
+            </div>
+            <div class="button-container draggable">
+                <button class="project-button open-modal" id="hotbox" ></button>
+                <h5>Hotbox</h5>
+            </div>
+            <div class="button-container draggable">
+                <button class="project-button open-modal" id="soundbar"></button>
+                <h5>Soundbar</h5>
+            </div>
+            <div class="button-container draggable">
+                <button class="project-button open-modal" id="portfolios"></button>
+                <h5>Portfolios</h5>
+            </div>
+        <!-- </div> -->
+    </div>
+    <!-- content container -->
+</div>
+            <div id="contact" class="contact page-view">
+  <div class="content-container">
+      <div class="draggable headings">
+          <h2>Need me?</h2>
+          <h3>Find me:</h3>
+          <h4><a href="https://www.linkedin.com/in/chris-nekich" target="_blank">LinkedIn</a></h4>
+          <h4><a href="https://twitter.com/theechriswill" target="_blank">Twitter</a></h4>
+          <h4><a href="https://instagram.com/chriswillphoto">Instagram</a></h4>
+          <h4><a href="https://github.com/chriswillphoto" target="_blank">Github</a></h4>
+      </div>
+  </div>
+</div>
+        </main>
+        <script src="js/index.min.js"></script>
+    </body>
+</html>
