@@ -65,6 +65,8 @@
       const mouseOffsetY = window.innerHeight - state.mouseY;
       const newPosX = mouseOffsetX - offsetWidth;
       const newPosY = mouseOffsetY - offsetHeight;
+      console.log(mouseOffsetY)
+      console.log(newPosY)
 
       state.selectedEl.style.right = newPosX + "px";
       state.selectedEl.style.bottom = newPosY + "px";
@@ -160,7 +162,7 @@
     function(event) {
       if (event.target.matches(".drag-handle")) {
         event.cancelBubble = true;
-        mousePosition(event.clientX, event.clientY);
+        mousePosition(event.touches[0].clientX, event.touches[0].clientY);
         dragHandler(event);
       }
       // console.log(event.target)
@@ -170,11 +172,13 @@
 
   document.addEventListener("touchmove", function(event) {
     if (state.mouseDown) {
+      event.cancelBubble = true;
       mousePosition(event.touches[0].clientX, event.touches[0].clientY);
     }
   });
 
   document.addEventListener("touchend", function(event) {
+    event.cancelBubble = false;
     state = {
       ...state,
       mouseDown: false

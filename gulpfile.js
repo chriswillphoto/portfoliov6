@@ -52,7 +52,7 @@ gulp.task("default", ["browserSync", "sass"], function() {
   gulp.watch("app/js/index.js", browserSync.reload);
 });
 
-gulp.task("clean:dist", function() {
+gulp.task("clean", function() {
   return del.sync("dist");
 });
 
@@ -67,5 +67,5 @@ gulp.task("useref", function() {
 });
 
 gulp.task("build", function(callback) {
-  runSequence(["clean:dist", "sass"], ["fileinclude", "useref"], callback);
+  runSequence(["clean", "sass"], ["fileinclude", "useref"], callback);
 });

@@ -47,6 +47,10 @@ footer {
   bottom: 0;
   right: 100px;
 
+  @media screen and (max-width: 1024px){
+    bottom: 45px;
+  }
+
 }
 header {
   z-index: 10000;
