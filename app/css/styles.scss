@@ -160,6 +160,11 @@ nav {
     color: white;
     background-color: transparent;
     z-index: 10000;
+
+    @media screen and (max-width: 1024px){
+      width: 21px; font-size: 24px;
+      left: -9px;
+    }
   }
 }
 
@@ -245,9 +250,9 @@ nav {
   cursor: pointer;
   transition: all 0.2s;
 
-  @media screen and (max-width: 1024px) {
-    display: none;
-  }
+  // @media screen and (max-width: 1024px) {
+  //   display: none;
+  // }
 
   &::before {
     content: " ";
@@ -328,11 +333,11 @@ nav {
   to { opacity: 0 ;}
 }
 
-@media screen and (max-width: 1024px){
-  .modal-content h4:first-of-type {
-    display: none;
-  }
-  .modal-content p:first-of-type {
-    display: none;
-  }
-}
+// @media screen and (max-width: 1024px){
+//   .modal-content h4:first-of-type {
+//     display: none;
+//   }
+//   .modal-content p:first-of-type {
+//     display: none;
+//   }
+// }

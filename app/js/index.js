@@ -4,13 +4,12 @@
   let windowWidth = window.innerWidth;
   let draggables = document.querySelectorAll(".draggable");
   let workWindow = document.querySelector("#work");
-  let pageViews = document.querySelectorAll('.page-view');
+  let pageViews = document.querySelectorAll(".page-view");
   // let workButtons = document.querySelectorAll('.button-container');
 
-
-  navButtons.forEach(function(e, i){
-      e.classList.add('animate')
-  })
+  navButtons.forEach(function(e, i) {
+    e.classList.add("animate");
+  });
 
   let state = {
     mouseDown: false,
@@ -27,19 +26,19 @@
     });
     viewBox.style.left = 0;
 
-    document.querySelector('#home').classList.add('active-view');
+    document.querySelector("#home").classList.add("active-view");
   };
 
   const shiftView = function(e) {
     e.preventDefault();
-    pageViews.forEach(function(view){
-      view.classList.remove('active-view');
-    })
+    pageViews.forEach(function(view) {
+      view.classList.remove("active-view");
+    });
 
     const newLeft = e.target.getAttribute("data-left");
-    let activeView = e.target.getAttribute('data-view');
-    
-    document.querySelector('#'+activeView).classList.add('active-view');
+    let activeView = e.target.getAttribute("data-view");
+
+    document.querySelector("#" + activeView).classList.add("active-view");
 
     if (viewBox.style.left != newLeft) {
       viewBox.style.left = newLeft;
@@ -60,7 +59,7 @@
 
   const boxPosition = function() {
     if (state.mouseDown) {
-      const offsetWidth = state.selectedEl.offsetWidth - ( state.selectedEl.offsetWidth / 2 ); // width of element - allowance for translateX +50%
+      const offsetWidth = state.selectedEl.offsetWidth - state.selectedEl.offsetWidth / 2; // width of element - allowance for translateX +50%
       const offsetHeight = state.selectedEl.offsetHeight;
       const mouseOffsetX = window.innerWidth - state.mouseX;
       const mouseOffsetY = window.innerHeight - state.mouseY;
@@ -77,20 +76,19 @@
     let newY = 0;
     let newX = 0;
     if (0 <= yPos && yPos <= window.innerHeight) {
-      newY = yPos
-    }else if( yPos < 0){
+      newY = yPos;
+    } else if (yPos < 0) {
       newY = 0;
-    }else if( yPos > window.innerHeight){
+    } else if (yPos > window.innerHeight) {
       newY = window.innerHeight;
     }
     if (0 <= xPos && xPos <= window.innerWidth) {
-      newX = xPos
-    }else if( xPos < 0){
+      newX = xPos;
+    } else if (xPos < 0) {
       newX = 0;
-    }else if( xPos > window.innerWidth){
+    } else if (xPos > window.innerWidth) {
       newX = window.innerWidth;
     }
-
 
     state = {
       ...state,
@@ -98,10 +96,7 @@
       mouseY: newY
     };
 
-    // console.log(state);
   };
-
-
 
   // event delegation
   document.addEventListener(
@@ -139,7 +134,7 @@
         mousePosition(event.clientX, event.clientY);
         dragHandler(event);
       }
-      // console.log(event.target)
+      // console.log(event.clientX, event.clientY)
     },
     false
   );
@@ -155,34 +150,36 @@
 
   document.addEventListener("mousemove", function(event) {
     if (state.mouseDown) {
-      mousePosition(event);
+      mousePosition(event.clientX, event.clientY);
     }
   });
 
+  
   document.addEventListener(
     "touchstart",
     function(event) {
       if (event.target.matches(".drag-handle")) {
+        event.cancelBubble = true;
         mousePosition(event.clientX, event.clientY);
         dragHandler(event);
       }
       // console.log(event.target)
     },
     false
-  ); 
+  );
 
-  document.addEventListener("touchmove", function(event){
-    mousePosition(event.touches[0].clientX, event.touches[0].clientY);
-  })
+  document.addEventListener("touchmove", function(event) {
+    if (state.mouseDown) {
+      mousePosition(event.touches[0].clientX, event.touches[0].clientY);
+    }
+  });
 
-  document.addEventListener("touchend", function(event){
+  document.addEventListener("touchend", function(event) {
     state = {
       ...state,
       mouseDown: false
-    }
-    console.log(state)
-  })
+    };
+  });
 
   onStart();
-  
 })();
