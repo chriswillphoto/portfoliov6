@@ -69,6 +69,14 @@ $gradient1: radial-gradient(circle, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 
     // transition: all 1.2s;
     // transform: translateX(+200%) translateY(+0%);
 
+    h5 {
+      position: absolute;
+      margin: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
     .project-button {
       background: url($button-sprites), $gradient1;
       background-size: auto 96px;

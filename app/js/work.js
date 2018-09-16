@@ -149,7 +149,7 @@ const portfolios = `<div class="words">
 <div class="tech">
   <div class="stack">
     <h5>Tech Stack</h5>
-    <p>Ruby-on-Rails</p>
+    <p>HTML+CSS+JS</p>
   </div>
   <div class="lib">
     <h5>Libraries</h5>

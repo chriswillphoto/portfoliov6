@@ -100,7 +100,7 @@ nav {
   position: fixed;
   overflow-x: hidden;
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
 }
 
 #viewbox {
@@ -129,7 +129,7 @@ nav {
   overflow-y: scroll;
   @media screen and (max-width: 480px){
     overflow-y: scroll;
-    height: calc(100% - 80px);
+    height: calc(100% - 150px); // 90px for nav buttons
   }
 
   &:hover {
@@ -245,6 +245,10 @@ nav {
   cursor: pointer;
   transition: all 0.2s;
 
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+
   &::before {
     content: " ";
     position: absolute;
@@ -322,4 +326,13 @@ nav {
 @keyframes fadeOut {
   from { opacity: 1; }
   to { opacity: 0 ;}
+}
+
+@media screen and (max-width: 1024px){
+  .modal-content h4:first-of-type {
+    display: none;
+  }
+  .modal-content p:first-of-type {
+    display: none;
+  }
 }
