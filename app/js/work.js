@@ -160,7 +160,7 @@ const portfolios = `<div class="words">
   </div>
 </div> <!-- tech -->
 <div class="link-box">
-<a href="https://lucid-ptolemy-7be489.netlify.com/" target="_blank">Live Site</a>
+<a href="https://chriswillphoto.github.io/portfolio/" target="_blank">Live Site</a>
 <a href="https://github.com/chriswillphoto/portfolio" target="_blank">Github Repo</a>
 </div>
 </div>`;
