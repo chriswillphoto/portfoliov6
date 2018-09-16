@@ -73,21 +73,21 @@
     }
   };
 
-  const mousePosition = function(e) {
+  const mousePosition = function(xPos, yPos) {
     let newY = 0;
     let newX = 0;
-    if (0 <= e.clientY && e.clientY <= window.innerHeight) {
-      newY = e.clientY
-    }else if( e.clientY < 0){
+    if (0 <= yPos && yPos <= window.innerHeight) {
+      newY = yPos
+    }else if( yPos < 0){
       newY = 0;
-    }else if( e.clientY > window.innerHeight){
+    }else if( yPos > window.innerHeight){
       newY = window.innerHeight;
     }
-    if (0 <= e.clientX && e.clientX <= window.innerWidth) {
-      newX = e.clientX
-    }else if( e.clientX < 0){
+    if (0 <= xPos && xPos <= window.innerWidth) {
+      newX = xPos
+    }else if( xPos < 0){
       newX = 0;
-    }else if( e.clientX > window.innerWidth){
+    }else if( xPos > window.innerWidth){
       newX = window.innerWidth;
     }
 
@@ -136,7 +136,7 @@
     function(event) {
       if (event.target.matches(".drag-handle")) {
         event.preventDefault();
-        mousePosition(event);
+        mousePosition(event.clientX, event.clientY);
         dragHandler(event);
       }
       // console.log(event.target)
@@ -150,7 +150,7 @@
       mouseDown: false
     };
     window.clearInterval(state.timerID);
-    console.log(state);
+    // console.log(state);
   });
 
   document.addEventListener("mousemove", function(event) {
@@ -158,6 +158,30 @@
       mousePosition(event);
     }
   });
+
+  document.addEventListener(
+    "touchstart",
+    function(event) {
+      if (event.target.matches(".drag-handle")) {
+        mousePosition(event.clientX, event.clientY);
+        dragHandler(event);
+      }
+      // console.log(event.target)
+    },
+    false
+  ); 
+
+  document.addEventListener("touchmove", function(event){
+    mousePosition(event.touches[0].clientX, event.touches[0].clientY);
+  })
+
+  document.addEventListener("touchend", function(event){
+    state = {
+      ...state,
+      mouseDown: false
+    }
+    console.log(state)
+  })
 
   onStart();
   
