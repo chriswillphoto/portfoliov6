@@ -94,7 +94,7 @@ const quotDesc = `<div class="words">
 <div class="link-box">
 <a href="https://chriswillphoto.github.io/quot-app/" target="_blank">Live Site</a>
 <a href="https://github.com/chriswillphoto/quot-app" target="_blank">Github Repo</a>
-<p><small>(N.B. The backend for this project is hosted on heroku, and will need a minute or two to "wake up")</small></p>
+<p><small>(N.B. The back end was originally a ruby-on-rails api hosted on heroku which was later migrated over to a firebase realtime database)</small></p>
 </div>
 </div>`;
 
