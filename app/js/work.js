@@ -35,6 +35,7 @@ const hotboxDesc = `<div class="words">
   <div class="stack">
     <h5>Tech Stack</h5>
     <p>Ruby-on-Rails</p>
+    <p>Postgres</p>
   </div>
   <div class="lib">
     <h5>Libraries</h5>
@@ -61,6 +62,7 @@ back end through the means of ajax requests. User authentication is done through
     <h5>Tech Stack</h5>
     <p>React</p>
     <p>Ruby-on-Rails</p>
+    <p>Postgres</p>
   </div>
   <div class="lib">
     <h5>Libraries</h5>
@@ -130,6 +132,7 @@ of creation.</p>
   <div class="stack">
     <h5>Tech Stack</h5>
     <p>Ruby-on-Rails</p>
+    <p>Postgres</p>
   </div>
   <div class="lib">
     <h5>Libraries</h5>
