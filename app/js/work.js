@@ -151,7 +151,7 @@ const portfolios = `<div class="words">
 <p>These are the previous versions of this portfolio</p>
 
 <img class="image" src='https://res.cloudinary.com/dyqesnour/image/upload/c_scale,q_60,w_680/v1517655191/Screen_Shot_2018-02-03_at_9.52.39_pm_tupxnv.png' />
-<p>The first iteration of my portfolio. Features a starry night landing page which reacts to music - using the WebAudioAPI, animated menus and sliding page transitions.</p>
+<p>The first iteration of my portfolio. Features a starry night landing page which reacts to music (using the WebAudioAPI), animated menus and sliding page transitions.</p>
 <div class="tech">
   <div class="stack">
     <h5>Tech Stack</h5>

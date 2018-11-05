@@ -3,7 +3,8 @@ $button-sprites: "https://res.cloudinary.com/dyqesnour/image/upload/v1536459281/
 $gradient1: radial-gradient(circle,#2a2d34 0%, rgba(40, 40, 40, 1) 100%);
 
 #work {
-  background-image: url(https://res.cloudinary.com/dyqesnour/image/upload/v1532762880/portfoliov5bgs2_ifukft.png);
+  // background-image: url(https://res.cloudinary.com/dyqesnour/image/upload/v1532762880/portfoliov5bgs2_ifukft.png);
+  background: linear-gradient(to right, #3e92cc, #2a2d34);
 
   .project-modal {
     width: 95%;
@@ -75,6 +76,7 @@ $gradient1: radial-gradient(circle,#2a2d34 0%, rgba(40, 40, 40, 1) 100%);
       left: 50%;
       transform: translateX(-50%);
       white-space: nowrap;
+      color: #f3f3f3;
     }
 
     .project-button {
