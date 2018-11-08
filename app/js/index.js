@@ -110,6 +110,7 @@
   document.addEventListener(
     "click",
     function(event) {
+
       if (event.target.matches(".nav-button")) {
         shiftView(event);
       }
@@ -122,7 +123,7 @@
         workWindow.classList.add("modal-open");
       }
 
-      if (event.target.matches(".close")) {
+      if (event.target.matches(".close") || ( document.querySelectorAll('.modal-open').length > 0 && event.target.matches('.content-container') )) {
         workWindow.classList.remove("modal-open");
         document.body.classList.remove("info-modal-open");
       }
