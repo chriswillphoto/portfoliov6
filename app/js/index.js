@@ -34,7 +34,11 @@
     pageViews.forEach(function(view) {
       view.classList.remove("active-view");
     });
+    navButtons.forEach(function(button){
+      button.classList.remove("active");
+    });
 
+    e.target.classList.add("active")
     const newLeft = e.target.getAttribute("data-left");
     let activeView = e.target.getAttribute("data-view");
 

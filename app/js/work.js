@@ -78,7 +78,7 @@ back end through the means of ajax requests. User authentication is done through
 </div>`;
 
 const quotDesc = `<div class="words">
-<h2>&amp;quot</h2>
+<h2>&amp;quot;</h2>
 <img class="image" src='https://res.cloudinary.com/dyqesnour/image/upload/c_scale,q_60,w_800/v1517654266/Screen_Shot_2018-02-03_at_9.36.52_pm_fn8dks.png' />
 <p>Quot is a quote reference app built in Vue.js, which utilises ajax requests to pull quotes from a ruby-on-rails API. Users can pick a topic (motivation, creativity, love, etc) and randomly cycle through related quotes. Alternatively, users can look at all the quotes in the database and filter them down through the use of the search bar. </p>
 <div class="tech">
@@ -86,6 +86,8 @@ const quotDesc = `<div class="words">
     <h5>Tech Stack</h5>
     <p>Vue.js</p>
     <p>Ruby-on-Rails</p>
+    <p>Postgres</p>
+    <p>Firebase</p>
   </div>
   <div class="lib">
     <h5>Libraries</h5>
