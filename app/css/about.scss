@@ -23,7 +23,7 @@
     color: white;
     padding: 16px;
 
-    @media screen and( max-width: 480px ) {
+    @media screen and( max-width: 640px ) {
       bottom: 70%;
       right: 50%;
       transform: translateX(+50%) translateY(100%);
